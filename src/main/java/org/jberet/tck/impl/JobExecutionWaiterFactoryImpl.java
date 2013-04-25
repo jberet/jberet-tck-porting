@@ -20,7 +20,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
  
-package org.mybatch.tck.impl;
+package org.jberet.tck.impl;
 
 import javax.batch.operations.JobOperator;
 

@@ -20,7 +20,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
 
-package org.mybatch.tck.impl;
+package org.jberet.tck.impl;
 
 import java.util.concurrent.TimeUnit;
 import javax.batch.operations.JobOperator;
@@ -30,7 +30,7 @@ import javax.batch.runtime.JobExecution;
 
 import com.ibm.jbatch.tck.spi.JobExecutionTimeoutException;
 import com.ibm.jbatch.tck.spi.JobExecutionWaiter;
-import org.mybatch.runtime.JobExecutionImpl;
+import org.jberet.runtime.JobExecutionImpl;
 
 public final class JobExecutionWaiterImpl implements JobExecutionWaiter {
     private JobExecutionImpl jobExecution;
