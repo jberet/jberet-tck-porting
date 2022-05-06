@@ -82,80 +82,58 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derby</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derbynet</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.jboss.weld.se</groupId>
             <artifactId>weld-se-core</artifactId>
             <scope>test</scope>
         </dependency>
 
+
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-            <version>3.0.0</version>
+            <groupId>org.jboss.weld</groupId>
+            <artifactId>weld-core-impl</artifactId>
+            <version>5.0.0.Beta1</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.jberet</groupId>
             <artifactId>jberet-core</artifactId>
-            <version>${version.org.jberet}</version>
+            <version>2.0.5.Final</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jberet</groupId>
             <artifactId>jberet-se</artifactId>
-            <version>${version.org.jberet}</version>
+            <version>2.0.5.Final</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.jberet</groupId>
-            <artifactId>jberet-support</artifactId>
-            <version>${version.org.jberet}</version>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.197</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.jboss.marshalling</groupId>
             <artifactId>jboss-marshalling</artifactId>
+            <version>2.0.12.Final</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.weld</groupId>
-            <artifactId>weld-core-impl</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.spec.javax.el</groupId>
-            <artifactId>jboss-el-api_3.0_spec</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>javax.el</artifactId>
+            <version>3.4.3.Final</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.wildfly.security</groupId>
             <artifactId>wildfly-security-manager</artifactId>
+            <version>1.1.2.Final</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
             <scope>test</scope>
         </dependency>
 
