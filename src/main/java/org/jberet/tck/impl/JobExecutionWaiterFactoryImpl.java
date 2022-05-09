@@ -10,7 +10,7 @@
 
 package org.jberet.tck.impl;
 
-import javax.batch.operations.JobOperator;
+import jakarta.batch.operations.JobOperator;
 
 import com.ibm.jbatch.tck.spi.JobExecutionWaiter;
 import com.ibm.jbatch.tck.spi.JobExecutionWaiterFactory;
