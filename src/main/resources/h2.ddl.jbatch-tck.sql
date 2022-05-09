@@ -15,8 +15,6 @@ CREATE TABLE Orders
     quantity INT
 );
 
-SET IDENTITY_INSERT Orders ON;
-
 CREATE TABLE Inventory
 (
     itemID   INT NOT NULL PRIMARY KEY,
