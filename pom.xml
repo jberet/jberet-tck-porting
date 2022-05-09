@@ -22,23 +22,37 @@
 
     <artifactId>jberet-tck-porting</artifactId>
     <version>2.1.0.Final-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <version.com.ibm.jbatch.tck.spi>2.1.0</version.com.ibm.jbatch.tck.spi>
         <version.org.jberet.jberet-core>2.0.5.Final</version.org.jberet.jberet-core>
     </properties>
 
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>jakarta.batch</groupId>
             <artifactId>com.ibm.jbatch.tck.spi</artifactId>
             <version>${version.com.ibm.jbatch.tck.spi}</version>
-            <scope>test</scope>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.ejb</groupId>
+            <artifactId>jakarta.ejb-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jberet</groupId>
             <artifactId>jberet-core</artifactId>
             <version>${version.org.jberet.jberet-core}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
