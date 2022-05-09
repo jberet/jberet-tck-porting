@@ -23,11 +23,20 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.ejb.DependsOn;
 import jakarta.ejb.Singleton;
 import jakarta.ejb.Startup;
 
+/**
+ * A test bean that looks up the datasource, and reads data from database tables.
+ * The purpose is to verify the datasource and tables have been properly created
+ * and initialized with test data.
+ * This class can be packaged and deployed as an independent ejb jar, or
+ * packaged and deployed with {@link BatchTckConfigBean} in a co-located ejb jar.
+ */
 @Singleton
-@Startup
+@Startup()
+@DependsOn("BatchTckConfigBean")
 public class TestBean {
     private static final String SELECT_NUMBERS = "select * from Numbers";
     private static final String SELECT_INVENTORY = "select * from Inventory";
