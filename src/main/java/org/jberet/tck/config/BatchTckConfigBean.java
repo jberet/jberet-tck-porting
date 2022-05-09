@@ -22,10 +22,11 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.annotation.Resource;
 import jakarta.annotation.sql.DataSourceDefinition;
 import jakarta.ejb.Singleton;
 import jakarta.ejb.Startup;
@@ -33,9 +34,7 @@ import jakarta.ejb.Startup;
 @Singleton
 @Startup
 @DataSourceDefinition(
-        name = "jdbc/orderDB",
-//        name = "java:/jdbc/orderDB",
-//        name = "java:jboss/exported/jdbc/orderDB",
+        name = "java:/jdbc/orderDB",
         className = "org.h2.jdbcx.JdbcDataSource",
         url = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE",
         user = "sa",
@@ -46,11 +45,27 @@ public class BatchTckConfigBean {
     private static final String SELECT_NUMBERS = "select * from Numbers";
     private static final String SELECT_INVENTORY = "select * from Inventory";
     Logger logger = Logger.getLogger(BatchTckConfigBean.class.getName());
-    @Resource(lookup = "jdbc/orderDB")
+
+//    The following injection works.
+//    But using jndi lookup in initDataSource() method to make sure lookup works,
+//    since the TCK uses jndi lookup of "jdbc/orderDB".
+//    @Resource(lookup = "java:/jdbc/orderDB")
     private DataSource dataSource;
+
+    private void initDataSource() {
+        final String jndiName = "jdbc/orderDB";
+        try {
+            final InitialContext initialContext = new InitialContext();
+            dataSource = (DataSource) initialContext.lookup(jndiName);
+            logger.log(Level.INFO, "looked up " + jndiName + ": " + dataSource);
+        } catch (NamingException e) {
+            throw new IllegalStateException("failed to lookup " + jndiName, e);
+        }
+    }
 
     @PostConstruct
     private void postConstruct() {
+        initDataSource();
         Connection connection = null;
         try {
             connection = dataSource.getConnection();
