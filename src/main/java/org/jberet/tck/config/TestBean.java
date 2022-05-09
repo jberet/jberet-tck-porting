@@ -36,7 +36,6 @@ public class TestBean {
     private DataSource dataSource;
 
     private void initDataSource() {
-//        final String jndiName = "datasources/ExampleDS";
         final String jndiName = "jdbc/orderDB";
         try {
             final InitialContext initialContext = new InitialContext();
