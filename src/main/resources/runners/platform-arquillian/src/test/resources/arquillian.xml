@@ -34,10 +34,10 @@ SPDX-License-Identifier: Apache-2.0 -->
   <container qualifier="glassfish-auth" default="true">
   -->
 
- <container qualifier="wildfly-remote" default="true">
-  </container>
+    <container qualifier="wildfly-remote" default="true">
+    </container>
 
- <container qualifier="glassfish-remote">
+    <container qualifier="glassfish-remote">
     <configuration>
       <property name="adminHost">localhost</property>
       <property name="adminHttps">false</property>
