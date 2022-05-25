@@ -36,7 +36,7 @@ import jakarta.ejb.Startup;
 @DataSourceDefinition(
         name = "java:/jdbc/orderDB",
         className = "org.h2.jdbcx.JdbcDataSource",
-        url = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE",
+        url = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS app\\;SET SCHEMA app",
         user = "sa",
         password = "sa",
         properties = {"use-java-context=false"})
