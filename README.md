@@ -55,6 +55,5 @@ mvn verify
 
 ### undeloy and shutdown
 ```bash
-/bin/rm $JBOSS_HOME/standalone/deployments/jberet-tck-porting.jar
-$JBOSS_HOME/bin/jboss-cli.sh --connect --command=shutdown
+$JBOSS_HOME/bin/jboss-cli.sh --connect --commands="undeploy jberet-tck-porting.jar, shutdown"
 ```
