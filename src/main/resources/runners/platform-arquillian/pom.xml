@@ -162,19 +162,7 @@ Copyright (c) 2022 Contributors to the Eclipse Foundation
                 <dependency>
                     <groupId>org.wildfly.arquillian</groupId>
                     <artifactId>wildfly-arquillian-container-remote</artifactId>
-                    <version>5.0.0.Alpha2</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.jboss.remoting</groupId>
-                    <artifactId>jboss-remoting</artifactId>
-                    <version>5.0.23.Final</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.jboss.remotingjmx</groupId>
-                    <artifactId>remoting-jmx</artifactId>
-                    <version>3.0.4.Final</version>
+                    <version>5.0.0.Alpha3</version>
                     <scope>test</scope>
                 </dependency>
             </dependencies>
