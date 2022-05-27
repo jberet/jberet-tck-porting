@@ -192,6 +192,18 @@
                                   </property>
                                 </systemProperties>
                             -->
+                            <argLine>
+                                --add-exports=java.desktop/sun.awt=ALL-UNNAMED
+                                --add-opens=java.base/java.io=ALL-UNNAMED
+                                --add-opens=java.base/java.lang=ALL-UNNAMED
+                                --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+                                --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+                                --add-opens=java.base/java.security=ALL-UNNAMED
+                                --add-opens=java.base/java.util=ALL-UNNAMED
+                                --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+                                --add-opens=java.management/javax.management=ALL-UNNAMED
+                                --add-opens=java.naming/javax.naming=ALL-UNNAMED
+                            </argLine>
                         </configuration>
                     </execution>
                     <execution>
@@ -206,6 +218,18 @@
                             <failIfNoTests>false</failIfNoTests>
                             <includesFile>${project.build.directory}/test-classes/testprofiles/batch-tck-impl-appjoboperator-suite-includes.txt</includesFile>
                             <systemPropertiesFile>${project.basedir}/config/tck.exec.properties</systemPropertiesFile>
+                            <argLine>
+                                --add-exports=java.desktop/sun.awt=ALL-UNNAMED
+                                --add-opens=java.base/java.io=ALL-UNNAMED
+                                --add-opens=java.base/java.lang=ALL-UNNAMED
+                                --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+                                --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+                                --add-opens=java.base/java.security=ALL-UNNAMED
+                                --add-opens=java.base/java.util=ALL-UNNAMED
+                                --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+                                --add-opens=java.management/javax.management=ALL-UNNAMED
+                                --add-opens=java.naming/javax.naming=ALL-UNNAMED
+                            </argLine>
                         </configuration>
                     </execution>
                     <execution>
