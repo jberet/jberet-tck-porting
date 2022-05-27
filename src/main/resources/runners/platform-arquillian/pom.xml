@@ -137,6 +137,18 @@ Copyright (c) 2022 Contributors to the Eclipse Foundation
                                 <arquillian.extensions.jakarta.batch.groupPrefixesToIgnore>org.wildfly</arquillian.extensions.jakarta.batch.groupPrefixesToIgnore>
                                 -->
                             </systemPropertyVariables>
+                            <argLine>
+                                --add-exports=java.desktop/sun.awt=ALL-UNNAMED
+                                --add-opens=java.base/java.io=ALL-UNNAMED
+                                --add-opens=java.base/java.lang=ALL-UNNAMED
+                                --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+                                --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+                                --add-opens=java.base/java.security=ALL-UNNAMED
+                                --add-opens=java.base/java.util=ALL-UNNAMED
+                                --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+                                --add-opens=java.management/javax.management=ALL-UNNAMED
+                                --add-opens=java.naming/javax.naming=ALL-UNNAMED
+                            </argLine>
                         </configuration>
                     </plugin>
                 </plugins>
