@@ -7,11 +7,11 @@ cd $JBOSS_HOME/bin
 ./standalone.sh
 ```
 
-### download and unzip Jakarta Batch TCK 2.1.0
+### download and unzip Jakarta Batch TCK 2.1.1
 ```bash
-wget https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.0.zip
-unzip jakarta.batch.official.tck-2.1.0.zip
-export BATCH_TCK_DIR=`pwd`/jakarta.batch.official.tck-2.1.0
+wget https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.1.zip
+unzip jakarta.batch.official.tck-2.1.1.zip
+export BATCH_TCK_DIR=`pwd`/jakarta.batch.official.tck-2.1.1
 ```
 
 ### clone jberet-tck-porting repo, and build and deploy to WildFly to create test datasource and database
