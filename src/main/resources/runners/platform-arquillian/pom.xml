@@ -161,6 +161,13 @@ Copyright (c) 2022 Contributors to the Eclipse Foundation
                     <scope>test</scope>
                 </dependency>
             </dependencies>
+
+            <repositories>
+                <repository>
+                    <id>jakarta-ee10-staging</id>
+                    <url>https://jakarta.oss.sonatype.org/content/repositories/staging/</url>
+                </repository>
+            </repositories>
         </profile>
     
         <profile>
