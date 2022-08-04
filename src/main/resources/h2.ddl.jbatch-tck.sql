@@ -10,7 +10,7 @@ CREATE TABLE Numbers
 
 CREATE TABLE Orders
 (
-    orderID  INTEGER NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    orderID  IDENTITY(1,1) PRIMARY KEY NOT NULL,
     itemID   INT,
     quantity INT
 );
