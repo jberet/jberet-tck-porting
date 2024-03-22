@@ -76,24 +76,24 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
-                    <!--                    <execution>-->
-                    <!--                        <id>unpack-sigfiles</id>-->
-                    <!--                        <goals>-->
-                    <!--                            <goal>unpack</goal>-->
-                    <!--                        </goals>-->
-                    <!--                        <phase>pre-integration-test</phase>-->
-                    <!--                        <configuration>-->
-                    <!--                            <artifactItems>-->
-                    <!--                                <artifactItem>-->
-                    <!--                                  <groupId>jakarta.batch</groupId>-->
-                    <!--                                  <artifactId>com.ibm.jbatch.tck</artifactId>-->
-                    <!--                                  <version>${project.parent.version}</version>-->
-                    <!--                                </artifactItem>-->
-                    <!--                            </artifactItems>-->
-                    <!--                            <includes>sigtest/*</includes>-->
-                    <!--                            <outputDirectory>${project.build.directory}/sigtest-copy</outputDirectory>-->
-                    <!--                        </configuration>-->
-                    <!--                    </execution>-->
+                    <execution>
+                        <id>unpack-sigfiles</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>pre-integration-test</phase>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>jakarta.batch</groupId>
+                                    <artifactId>com.ibm.jbatch.tck</artifactId>
+                                    <version>${project.parent.version}</version>
+                                </artifactItem>
+                            </artifactItems>
+                            <includes>sigtest/*</includes>
+                            <outputDirectory>${project.build.directory}/sigtest-copy</outputDirectory>
+                        </configuration>
+                    </execution>
                     <execution>
                         <id>unpack-classes</id>
                         <goals>
@@ -135,25 +135,28 @@
                 <executions>
                     <execution>
                         <id>default-cli</id>
-                        <!--                    <phase>integration-test</phase>-->
+                        <phase>integration-test</phase>
                         <goals>
-                            <!--                      <goal>check</goal>-->
-                            <goal>generate</goal>
+                            <goal>check</goal>
+                            <!--                            <goal>generate</goal>-->
                         </goals>
                     </execution>
                 </executions>
-                <!--                <configuration>-->
-                <!--                  <action>strictcheck</action>-->
-                <!--                  <failOnError>true</failOnError>-->
-                <!--                  <packages>jakarta.batch.**</packages>-->
-                <!--                  <classes>${project.build.directory}/dependency</classes>-->
-                <!--                </configuration>-->
                 <configuration>
-                    <sigfile>${project.build.directory}/jakarta.batch.sig_${project.parent.version}</sigfile>
-                    <packages>
-                        jakarta.batch
-                    </packages>
-                    <attach>false</attach>
+                    <action>strictcheck</action>
+                    <failOnError>true</failOnError>
+                    <packages>jakarta.batch.**</packages>
+                    <classes>${project.build.directory}/dependency</classes>
+                    <!--                </configuration>-->
+                    <!--                <configuration>-->
+                    <!--                    <sigfile>${project.build.directory}/jakarta.batch.sig_${project.parent.version}</sigfile>-->
+                    <sigfile>
+                        ${project.build.directory}/sigtest-copy/sigtest/sigtest-1.6-batch.standalone.tck.sig-2.1-se11-OpenJDK-J9
+                    </sigfile>
+                    <!--                    <packages>-->
+                    <!--                        jakarta.batch-->
+                    <!--                    </packages>-->
+                    <!--                    <attach>false</attach>-->
                 </configuration>
             </plugin>
         </plugins>
