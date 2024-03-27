@@ -150,8 +150,11 @@
                     <!--                </configuration>-->
                     <!--                <configuration>-->
                     <!--                    <sigfile>${project.build.directory}/jakarta.batch.sig_${project.parent.version}</sigfile>-->
+                    <!--                    <sigfile>-->
+                    <!--                        ${project.build.directory}/sigtest-copy/sigtest/sigtest-1.6-batch.standalone.tck.sig-2.1-se11-OpenJDK-J9-->
+                    <!--                    </sigfile>-->
                     <sigfile>
-                        ${project.build.directory}/sigtest-copy/sigtest/sigtest-1.6-batch.standalone.tck.sig-2.1-se11-OpenJDK-J9
+                        ${project.build.directory}/sigtest-copy/sigtest/jakarta.sigtest-2.2-batch.standalone.tck.sig-2.1-se21-Temurin
                     </sigfile>
                     <!--                    <packages>-->
                     <!--                        jakarta.batch-->
